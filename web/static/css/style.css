@@ -1151,3 +1151,6 @@ p.sub-para {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
 }
+.body img{
+    max-width: 1px;
+}
