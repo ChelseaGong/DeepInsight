@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,16 +9,16 @@
     <meta name="viewport" content="width=device-width">
 
     <!-- Bootstrap styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
 
     <!-- Font-Awesome -->
-    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static "css/font-awesome/css/font-awesome.min.css" %}">
 
     <!-- Google Webfonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600|PT+Serif:400,400italic' rel='stylesheet' type='text/css'>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/style3.css" id="theme-styles">
+    <link rel="stylesheet" href="{% static "css/style3.css" %}" id="theme-styles">
 
     <!--[if lt IE 9]>      
         <script src="js/vendor/google/html5-3.6-respond-1.1.0.min.js"></script>
@@ -31,7 +32,7 @@
         <div class="widewrapper masthead">
             <div class="container">
                 <a href="index.html" id="logo">
-                    <img src="images/logo2.png" alt="clean Blog">
+                    <img src="{% static "images/logo2.png" %}" alt="clean Blog">
                 </a>
 
                 <div id="mobile-nav-toggle" class="pull-right">
@@ -70,13 +71,7 @@
             <div class="row">
                 <div class="col-md-8 blog-main">
                     <article class="blog-post">
-                        <header>
 
-                            <div class="lead-image">
-                                <img src="img/single-post.jpg" alt="" class="img-responsive">
-
-                            </div>
-                        </header>
 
 
 
@@ -89,7 +84,7 @@
                                     <td align="center" class="biaoti" height="60">License申请记录</td>
                                 </tr>
                                 <tr>
-                                    <td align="right" height="25">{{user.time[0]}}---{{user.time[n]}}</td>
+                                    <td align="right" height="25">2017.01.01-2017.08.01</td>
                                 </tr>
                             </table>
                             <table width="100%" border="1" cellspacing="1" cellpadding="4" bgcolor="#cccccc" class="tabtop13" align="center">
@@ -121,8 +116,8 @@
                         </header>
                         <div class="body">
                             <ul class="clean-list">
-                                <li><a href="change.html">个人信息修改</a></li>
-                                <li><a href="apply.html">申请License</a></li>
+                                <li><a href="http://127.0.0.1:8000/license/personal/change/">个人信息修改</a></li>
+                                <li><a href="http://127.0.0.1:8000/license/personal/apply/">申请License</a></li>
 
 
 
@@ -144,8 +139,8 @@
         </div>
     </footer>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/modernizr.js"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/modernizr.js" %}"></script>
 
 </body>
 

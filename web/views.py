@@ -17,5 +17,14 @@ def contact(request):
     return render(request, 'contact.html', {})
 def user(request):
     return render(request, 'user.html', {})
+def forgot(request):
+    return render(request, 'forgot.html', {})
+def personal(request):
+    return render(request, 'personal.html', {})
+def apply(request):
+    return render(request, 'apply.html', {})
+def change(request):
+    return render(request, 'change.html', {})
+
 
 

@@ -11,4 +11,8 @@ urlpatterns = [
     url(r'^download/',views.download ),
     url(r'^user/',views.user ),
     url(r'^contact/',views.contact ),
+    url(r'^login/forgot/',views.forgot ),
+    url(r'^personal/$', views.personal),
+    url(r'^personal/apply/', views.apply),
+    url(r'^personal/change/', views.change),
 ]
