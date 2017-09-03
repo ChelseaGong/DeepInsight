@@ -4,7 +4,15 @@ from django import forms
 from django.forms import widgets
 
 class LoginForm(AuthenticationForm):
+    def __str__(self):
+        return self.cleaned_data['username']
+
+
     def __init__(self, *args, **kwargs):
+        """
+
+        :rtype: object
+        """
         super(LoginForm, self).__init__(*args, **kwargs)
         self.fields['username'] = forms.CharField(label='用户名',
                                                   widget=widgets.TextInput(attrs={
@@ -70,8 +78,8 @@ class RegisterForm(UserCreationForm):
         if commit:
             user.save()
         return user
-class LoginForm(AuthenticationForm):
-    def __init__(self, *args, **kwargs):
-        super(LoginForm, self).__init__(*args, **kwargs)
-        self.fields['username'] = forms.CharField()
-        self.fields['password'] = forms.CharField()
+#class LoginForm(AuthenticationForm):
+ #   def __init__(self, *args, **kwargs):
+  #      super(LoginForm, self).__init__(*args, **kwargs)
+   #     self.fields['username'] = forms.CharField()
+    #    self.fields['password'] = forms.CharField()
