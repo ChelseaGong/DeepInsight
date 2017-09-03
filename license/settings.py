@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'web'
+    'web',
+    'bootstrap3'
 ]
 
 MIDDLEWARE = [
@@ -100,6 +101,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'web.User'
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
@@ -127,14 +130,62 @@ STATICFILES_DIRS = (
     # os.path.join(os.path.dirname(__file__),'media').replace('\\','/'),
 )
 
-#MEDIA_ROOT = '/media'
-#MEDIA_URL = ''
-#STATIC_ROOT = ''
-#STATIC_URL = '/media/'
+BOOTSTRAP3 = {
 
+    # The URL to the jQuery JavaScript file
+    'jquery_url': 'https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js',
 
-#STATICFILES_STORAGE = 'myproject.storage.S3Storage'
+    # The Bootstrap base URL
+    'base_url': 'https://cdn.bootcss.com/bootstrap/3.3.7/',
 
+    # The complete URL to the Bootstrap CSS file (None means derive it from base_url)
+    'css_url': None,
 
-#{% load static %}
-#<img src="{% static "my_app/example.jpg" %}" alt="My image"/>
+    # The complete URL to the Bootstrap CSS file (None means no theme)
+    'theme_url': None,
+
+    # The complete URL to the Bootstrap JavaScript file (None means derive it from base_url)
+    'javascript_url': None,
+
+    # Put JavaScript in the HEAD section of the HTML document (only relevant if you use bootstrap3.html)
+    'javascript_in_head': False,
+
+    # Include jQuery with Bootstrap JavaScript (affects django-bootstrap3 template tags)
+    'include_jquery': False,
+
+    # Label class to use in horizontal forms
+    'horizontal_label_class': 'sr-only',
+
+    # Field class to use in horizontal forms
+    'horizontal_field_class': '',
+
+    # Set HTML required attribute on required fields, for Django <= 1.8 only
+    'set_required': True,
+
+    # Set HTML disabled attribute on disabled fields, for Django <= 1.8 only
+    'set_disabled': False,
+
+    # Set placeholder attributes to label if no placeholder is provided
+    'set_placeholder': True,
+
+    # Class to indicate required (better to set this in your Django form)
+    'required_css_class': '',
+
+    # Class to indicate error (better to set this in your Django form)
+    'error_css_class': 'has-error',
+
+    # Class to indicate success, meaning the field has valid input (better to set this in your Django form)
+    'success_css_class': 'has-success',
+
+    # Renderers (only set these if you have studied the source and understand the inner workings)
+    'formset_renderers':{
+        'default': 'bootstrap3.renderers.FormsetRenderer',
+    },
+    'form_renderers': {
+        'default': 'bootstrap3.renderers.FormRenderer',
+    },
+    'field_renderers': {
+        'default': 'bootstrap3.renderers.FieldRenderer',
+        'inline': 'bootstrap3.renderers.InlineFieldRenderer',
+    },
+}

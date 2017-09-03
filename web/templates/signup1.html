@@ -1,4 +1,6 @@
 {% load staticfiles %}
+{% load bootstrap3 %}
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -58,56 +60,7 @@
 
                     <h2>注册</h2>
                     {% csrf_token %}
-                    <div class="form-group">
-                        <label for="name" class="sr-only">真实姓名</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="真实姓名"
-                               autocomplete="off" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="username" class="sr-only">电子邮箱</label>
-                        <input type="email" class="form-control" id="username" name="username" placeholder="电子邮箱"
-                               autocomplete="off" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone" class="sr-only">手机号码</label>
-                        <input type="text" class="form-control" id="phone" name="phone" placeholder="手机号码"
-                               autocomplete="off" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password1" class="sr-only">密码</label>
-                        <input type="password" class="form-control" id="password1" name="password1" placeholder="密码"
-                               autocomplete="off" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password2" class="sr-only">重复密码</label>
-                        <input type="password" class="form-control" id="password2" name="password2" placeholder="重复密码"
-                               autocomplete="off" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="unit" class="sr-only">单位</label>
-                        <input type="text" class="form-control" id="unit" placeholder="单位" name="unit"
-                               autocomplete="off" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="office" class="sr-only">科室</label>
-                        <input type="text" class="form-control" id="office" name="office" placeholder="科室"
-                               autocomplete="off" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="post" class="sr-only">职务</label>
-                        <input type="text" class="form-control" id="post" name="post" placeholder="职务"
-                               autocomplete="off" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="professional" class="sr-only">职称</label>
-                        <input type="text" class="form-control" id="professional" name="professional" placeholder="职称"
-                               autocomplete="off" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="number" class="sr-only">工号</label>
-                        <input type="text" class="form-control" id="number" name="number" placeholder="工号"
-                               autocomplete="off" required>
-                    </div>
+                    {% bootstrap_form form layout="horizontal" %}
                     <div class="form-group">
                         <p>已注册? <a href="login.html">登录</a></p>
                     </div>
@@ -138,11 +91,7 @@
     $(document).ready(function () {
         $('#signup_form').bootstrapValidator({
             message: 'This value is not valid',
-            feedbackIcons: {
-                valid: 'glyphicon glyphicon-ok',
-                invalid: 'glyphicon glyphicon-remove',
-                validating: 'glyphicon glyphicon-refresh'
-            },
+
             fields: {
 
                 password1: {
@@ -150,10 +99,7 @@
                         notEmpty: {
                             message: '请输入密码'
                         },
-                        identical: {
-                            field: 'password2',
-                            message: '两次密码输入不一致'
-                        },
+                        
                         stringLength: {
                             min: 8,
                             message: '密码最少是八位的'
