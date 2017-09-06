@@ -10,7 +10,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 def login(request):
     if request.method == 'GET':
         return render(request, 'login1.html', context={
-            'form': LoginForm()
+            'form': LoginForm(),
         })
     else:
         form = LoginForm(data=request.POST, request=request)  # 需要传的参数是data+request， 只传data是不够的!
@@ -23,8 +23,6 @@ def login(request):
             #redirect_to = request.GET.get('next', '/')  # 重定向到要访问的地址，没有的话重定向到首页
             #return HttpResponseRedirect(redirect_to)
         else:  # 认证失败
-            print(form)
-            print('fff')
             return render(request, 'login.html', context={
                 'form': form
             })
@@ -52,8 +50,8 @@ def signup(request):
             return render(request, 'signup1.html', context={'form':form})
 
 def index(request):
-    return HttpResponseRedirect('signup')
-    # return render(request,'index.html',{})
+   # return HttpResponseRedirect('')
+     return render(request,'index.html',{})
 def introduction(request):
     return render(request, 'introduction.html', {})
 def team(request):

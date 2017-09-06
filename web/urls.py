@@ -3,14 +3,14 @@ from . import views
 
 urlpatterns = [
 
-    url(r'^$',views.index ),
+    url(r'^$',views.index,name='index'),
     url(r'^login/$', views.login, name='login'),
     url(r'^signup/',views.signup ,name = 'signup'),
-    url(r'^introduction/',views.introduction ),
-    url(r'^team/',views.team ),
-    url(r'^download/',views.download ),
-    url(r'^user/',views.user ),
-    url(r'^contact/',views.contact ),
+    url(r'^introduction/',views.introduction,name='introduction' ),
+    url(r'^team/',views.team ,name='team'),
+    url(r'^download/',views.download,name='download'),
+    url(r'^user/',views.user,name='user' ),
+    url(r'^contact/',views.contact,name='contact' ),
     url(r'^login/forgot/',views.forgot ),
     url(r'^personal/$', views.personal,name = 'personal'),
     url(r'^personal/apply/', views.apply),
