@@ -180,6 +180,7 @@ a i.dribble {
     float: left;
     margin-top: 22px;
 }
+  
 p.location {
     float: left;
     color: #fff;
@@ -199,6 +200,9 @@ p.location span {
 .logo a{
    display:block;
    text-decoration:none;
+}
+.logo img{
+    max-width: 100%;
 }
 .logo h1 a {
     font-weight: 700;
