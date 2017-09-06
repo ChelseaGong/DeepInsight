@@ -31,30 +31,12 @@
     <header>
         <div class="widewrapper masthead">
             <div class="container">
-                <a href="index.html" id="logo">
+                <a href="/" id="logo">
                     <img src="{% static "images/logo2.png" %}" alt="clean Blog">
                 </a>
 
-                <div id="mobile-nav-toggle" class="pull-right">
-                    <a href="#" data-toggle="collapse" data-target=".clean-nav .navbar-collapse">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                </div>
-
-                <nav class="pull-right clean-nav">
-                    <div class="collapse navbar-collapse">
-                        <ul class="nav nav-pills navbar-nav">
-
-
-                            <li>
-                                <a href="/login">登录</a>
-                            </li>
-                            <li>
-                                <a href="/signup">注册</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+                <div class="signup"><a href="/signup">注册</a></div>
+                <div class="login"><a href="/login">登录</a></div>
 
             </div>
         </div>
@@ -62,7 +44,7 @@
         <div class="widewrapper subheader">
             <div class="container">
                 <div class="clean-breadcrumb">
-                    <a href="/index">首页</a>
+                    <a href="/">首页</a>
                     <span class="separator">&#x2F;</span>
                     <a href="#">DeepInsight试用下载</a>
 

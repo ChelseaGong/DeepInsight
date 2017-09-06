@@ -1470,3 +1470,18 @@ fieldset[disabled] .btn-clean-two.active {
 	margin-bottom: 10px;
 	line-height: 20px;
 }
+.login{
+  font-size: 22px;
+float:right;
+margin-left: 1%;
+margin-right: 2%;
+margin-bottom: 12px;
+color: #23B5B9
+}
+.signup{
+font-size: 22px;
+float:right;
+margin-left: 1%;
+margin-right: 2%;
+margin-bottom: 12px;
+}
