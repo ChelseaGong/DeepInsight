@@ -15,4 +15,7 @@ urlpatterns = [
     url(r'^personal/$', views.personal,name = 'personal'),
     url(r'^personal/apply/', views.apply),
     url(r'^personal/change/', views.change),
+    url(r'^administrator/$', views.administrator,name = 'administrator'),
+    url(r'^personal/mima/', views.mima),
+    url(r'^personal/upload/', views.upload),
 ]
