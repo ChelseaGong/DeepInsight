@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>DeepInsight-个人中心</title>
+    <title>DeepInsight-管理员中心</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
@@ -36,7 +36,7 @@
                 </a>
             </div>
             <div class="signup"><a href="/signup">注销</a></div>
-            <div class="login"><a href="/login">个人中心</a></div>
+            <div class="login"><a href="/login">管理员中心</a></div>
         </div>
 
         <div class="widewrapper subheader">
@@ -44,7 +44,7 @@
                 <div class="clean-breadcrumb">
                     <a href="/">首页</a>
                     <span class="separator">&#x2F;</span>
-                    <a href="#">个人中心</a>
+                    <a href="#">管理员中心</a>
 
                 </div>
 
@@ -69,12 +69,12 @@
 
 
                         <div class="body">
-                            <h1>
-                                个人中心
-                            </h1>
+                            <h2>
+                                管理员中心
+                            </h2>
                             <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
                                 <tr>
-                                    <td align="center" class="biaoti" height="60">License申请记录</td>
+                                    <td align="center" class="biaoti" height="60">待批准申请</td>
                                 </tr>
                                 <tr>
                                     <td align="right" height="25">2017.01.01-2017.08.01</td>
@@ -82,24 +82,28 @@
                             </table>
                             <table width="100%" border="1" cellspacing="1" cellpadding="4" bgcolor="#cccccc" class="tabtop13" align="center">
                                 <tr>
-                                    <td width="10%" class="btbg font-center titfont">序号</td>
-                                    <td width="15%" class="btbg font-center titfont">申请日期</td>
-                                    <td width="22%" class="btbg font-center titfont">激活码</td>
-                                    <td width="22%" class="btbg font-center titfont">SN号</td>
-                                    <td width="15%" class="btbg font-center titfont">有效期限</td>
-                                    <td width="16%" class="btbg font-center titfont">审核状态</td>
-
+                                    <td width="5%" class="btbg font-center titfont">序号</td>
+                                    <td width="12%" class="btbg font-center titfont">申请日期</td>
+                                    <td width="12%" class="btbg font-center titfont">用户名</td>
+                                    <td width="13%" class="btbg font-center titfont">真实姓名</td>
+                                    <td width="19%" class="btbg font-center titfont">个人照片</td>
+                                    <td width="19%" class="btbg font-center titfont">扫描件</td>
+                                    <td width="10%" class="btbg font-center titfont">审核状态</td>
+                                    <td width="10%" class="btbg font-center titfont">是否批准</td>
                                 </tr>
                                 <tr>
-                                    <td width="10%" class="font-center">1</td>
-                                    <td width="15%" class="font-center">2017.01.05</td>
-                                    <td width="22%" class="font-center">激活码xxxx</td>
-                                    <td width="22%" class="font-center">SN号xxx</td>
-                                    <td width="15%" class="font-center">2017.04.05</td>
-                                    <td width="16%" class="font-center">待审核</td>
-
+                                    <td width="5%" class="btbg font-center">1</td>
+                                    <td width="12%" class="btbg font-center">2017.9.7</td>
+                                    <td width="12%" class="btbg font-center"><a href="#">2669612599@qq.com</a></td>
+                                    <td width="13%" class="btbg font-center">马莹莹</td>
+                                    <td width="19%" class="btbg font-center titfont"><img src=""></td>
+                                    <td width="19%" class="btbg font-center titfont"><img src=""></td>
+                                    <td width="10%" class="btbg font-center">待审核</td>
+                                    <td width="10%" class="btbg font-center">
+                                        <input type="radio" name="ratify" value="yes" /> 是</br>
+                                        <input type="radio" name="ratify" value="no" />否</td>
                                 </tr>
-                              
+                               
                             </table>
                         </div>
                     </article>
@@ -112,14 +116,13 @@
                             <h3>个人应用</h3>
                         </header>
                         <div class="body">
-                                <ul class="clean-list">
-                                        <li><a href="/">首页</a></li>
-                                        <li><a href="/personal">个人中心</a></li>
-                                        <li><a href="/personal/change/">个人信息修改</a></li>
-                                        <li><a href="/personal/mima">修改密码</a></li>
-                                        <li><a href="/personal/upload">上传个人照片与协议扫描件</a></li>
-                                        <li><a href="/personal/apply">申请License</a></li>
-                                </ul>
+                            <ul class="clean-list">
+                                <li><a href="/personal/change/">个人信息修改</a></li>
+                                <li><a href="/personal/apply/">申请License</a></li>
+
+
+
+                            </ul>
                         </div>
                     </div>
 

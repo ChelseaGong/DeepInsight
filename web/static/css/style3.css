@@ -16,7 +16,11 @@ a:focus {
   text-decoration: none;
   color: #5b6268;
 }
-
+label{
+  display: inline-block;
+  padding: 0 10px;
+  vertical-align: middle;
+}
 h1 {
   font-size: 45px;
   line-height: 60px;
@@ -1469,4 +1473,19 @@ fieldset[disabled] .btn-clean-two.active {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	line-height: 20px;
+}
+.login{
+  font-size: 22px;
+float:right;
+margin-left: 1%;
+margin-right: 2%;
+margin-bottom: 12px;
+color: #23B5B9
+}
+.signup{
+font-size: 22px;
+float:right;
+margin-left: 1%;
+margin-right: 2%;
+margin-bottom: 12px;
 }

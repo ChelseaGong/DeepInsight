@@ -70,6 +70,12 @@ def apply(request):
     return render(request, 'apply.html', {})
 def change(request):
     return render(request, 'change.html', {})
+def mima(request):
+    return render(request, 'mima.html', {})
+def upload(request):
+    return render(request, 'upload.html', {})
+def administrator(request):
+    return render(request, 'administrator.html', {})
 
 def edit_action(request):
     pass
