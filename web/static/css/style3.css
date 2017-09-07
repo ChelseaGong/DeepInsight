@@ -16,7 +16,11 @@ a:focus {
   text-decoration: none;
   color: #5b6268;
 }
-
+label{
+  display: inline-block;
+  padding: 0 10px;
+  vertical-align: middle;
+}
 h1 {
   font-size: 45px;
   line-height: 60px;
